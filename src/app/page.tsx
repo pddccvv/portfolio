@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Navbar from "./components/navbar";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,17 +41,58 @@ export default function Home() {
 
   return (
     <div className="bg-dark w-full h-screen">
-      <Navbar />
       <div className="flex justify-center items-center h-full">
         <div className="grid grid-cols-2 gap-8 items-center text-center">
           <div>
             <p className="text-lg">hello world, I&apos;m</p>
-            <span className="text-3xl font-bold">Rudiyat</span>
+            <span className="text-3xl font-bold text-red-500">Rudiyat</span>
             <p className="text-lg mt-2">
               {displayText}
               <span className="animate-blink">|</span>
             </p>
             <p className="text-gray-400 mt-2">Welcome to my personal website</p>
+
+            <div className="flex justify-center items-center">
+              <ul className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                <li>
+                  <Link href="https://github.com/pddccvv" target="_blank">
+                    <Image
+                      src="/assets/logo/logo-github.png"
+                      alt="Logo"
+                      width={40}
+                      height={40}
+                      className="bg-red-300 rounded-full"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://github.com/pddccvv" target="_blank">
+                    <Image
+                      src="/assets/logo/logo-linkedln.png"
+                      alt="Logo"
+                      width={40}
+                      height={40}
+                      className="bg-red-300 rounded-full"
+                    />
+                  </Link>
+                </li>
+                {/* <li>
+                  <Link href="https://github.com/pddccvv" target="_blank">
+                    <Image
+                      src="/assets/logo/logo-github.png"
+                      alt="Logo"
+                      width={40}
+                      height={40}
+                    />
+                  </Link>
+                </li> */}
+              </ul>
+            </div>
+            <div>
+              <button className="mt-2 px-3 py-2 text-sm text-red-500 border border-red-500 rounded-md bg-transparent transition-all duration-300 hover:bg-gradient-to-r hover:from-red-500 hover:to-orange-500 hover:text-white">
+                Hire Me
+              </button>
+            </div>
           </div>
 
           <div>
